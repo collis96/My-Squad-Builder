@@ -7,7 +7,7 @@ const app = express();
 
 const {getHomePage} = require('./routes/index');
 const {addPlayerPage, addPlayer, deletePlayer, editPlayer, editPlayerPage} = require('./routes/player');
-const port = 3306;
+const port = 3000;
 
 // create connection to database
 // the mysql.createConnection function takes in a configuration object which contains host, user, password and the database name.
@@ -28,7 +28,7 @@ db.connect((err) => {
 global.db = db;
 
 // configure middleware
-app.set('port', process.env.port || port); // set express to use this port
+app.set('port', process.env.PORT|| port); // set express to use this port
 app.set('views', __dirname + '/views'); // set express to look in this folder to render our view
 app.set('view engine', 'ejs'); // configure template engine
 app.use(bodyParser.urlencoded({ extended: false }));
