@@ -15,7 +15,7 @@ const db = mysql.createConnection ({
     host: 'eu-cdbr-west-03.cleardb.net',
     user: 'ba11a8f93f06df',
     password: '499c46cb',
-    database: '`heroku_d57d51dc683fd00`'
+    database: 'heroku_d57d51dc683fd00'
 });
 
 // connect to database
